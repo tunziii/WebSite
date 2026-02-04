@@ -1,0 +1,235 @@
+.fade {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body{
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+.bg1 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.bg3 {
+  background: linear-gradient(135deg, #6a0f1c, #b11226);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.bg2 {
+
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+button {
+  font-size: 50px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #704587;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Pacifico', cursive;
+
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+div, p {
+  text-align: center;
+}
+
+/* container for effects */
+#effects {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* HEART */
+.heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fa78d3;
+  background-position: center;
+
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform-origin: center;
+  animation: pop 1.5s ease forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fa78d3;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -20px;
+  left: 0;
+}
+
+.heart::after {
+  left: -20px;
+  top: 0;
+}
+
+/* POP animation */
+@keyframes pop {
+  0%   { transform: translate(-50%, -50%) rotate(45deg) scale(6); opacity: 0}
+  60%  { transform: translate(-50%, -50%) rotate(45deg) scale(8); opacity: 1}
+  100% { transform: translate(-50%, -50%) rotate(45deg) scale(6); opacity: 0}
+}
+
+/* FIREWORK PARTICLES */
+.spark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: pink;
+  border-radius: 50%;
+  animation: spark 1.5s ease forwards;
+}
+
+:root {
+  --x: 0px;
+  --y: 0px;
+}
+
+.image {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  background-image: url("../images/image.jpg");
+  background-size: 60%;
+  background-position: center 200%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
+  clip-path: polygon(
+    50% 96%,
+
+    30% 78%,
+    18% 62%,
+    10% 48%,
+    12% 32%,
+    22% 22%,
+    35% 20%,
+
+    50% 32%,
+
+    65% 20%,
+    78% 22%,
+    88% 32%,
+    90% 48%,
+    82% 62%,
+    70% 78%
+  );
+}
+
+
+
+
+@keyframes spark {
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
+
+
+.big1 {
+  font-size: 70px;
+}
+.big2 {
+  font-size: 82px;
+}
+.big3 {
+  font-size: 94px;
+}
+.big4 {
+  font-size: 106px;
+}
+.big5 {
+  font-size: 118px;
+}
+.big6 {
+  font-size: 130px;
+}
+.big7 {
+  font-size: 142px;
+}
+.big8 {
+  font-size: 154px;
+}
+.big9 {
+  font-size: 166px;
+}
+.big10 {
+  font-size: 178px;
+}
+.big11 {
+  font-size: 190px;
+}
+.big12 {
+  font-size: 202px;
+}
+.big13 {
+  font-size: 214px;
+}
+
+.small1{
+  font-size: 46px;
+}
+.small2{
+  font-size: 34px;
+}
+.small3{
+  font-size: 22px;
+}
+
+h1, h2, h3{
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+
+
+
